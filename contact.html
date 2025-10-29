@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Cecconi's Italian Restaurant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#041421",
+              secondary: "#042630",
+              accent: "#4c7273",
+              light: "#86b9b0",
+              neutral: "#d0d6d6",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-neutral text-primary">
+    <!-- Header & Navigation -->
+    <header class="bg-primary shadow-lg">
+      <nav class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <a href="index.html" class="flex items-center">
+              <img
+                src="images/logo.png"
+                alt="Cecconi's Restaurant Logo"
+                class="h-16 w-auto"
+                style="max-height: 64px; animation: none !important"
+              />
+            </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="index.html"
+              class="text-light hover:text-accent transition duration-300"
+              >Home</a
+            >
+            <a
+              href="menu.html"
+              class="text-light hover:text-accent transition duration-300"
+              >Menu</a
+            >
+            <a
+              href="about.html"
+              class="text-light hover:text-accent transition duration-300"
+              >About</a
+            >
+            <a href="contact.html" class="text-accent font-semibold">Contact</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden text-light focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden mt-4 bg-secondary rounded-lg"
+        >
+          <a
+            href="index.html"
+            class="block px-4 py-2 text-light hover:bg-accent transition duration-300"
+            >Home</a
+          >
+          <a
+            href="menu.html"
+            class="block px-4 py-2 text-light hover:bg-accent transition duration-300"
+            >Menu</a
+          >
+          <a
+            href="about.html"
+            class="block px-4 py-2 text-light hover:bg-accent transition duration-300"
+            >About</a
+          >
+          <a
+            href="contact.html"
+            class="block px-4 py-2 text-accent font-semibold"
+            >Contact</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section
+      class="bg-gradient-to-r from-primary to-secondary text-white py-16"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">Contact Us</h1>
+        <p class="text-xl">We'd love to hear from you</p>
+      </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-12">
+          <!-- Contact Form -->
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold mb-6 text-primary">
+              Send us a Message
+            </h2>
+            <form id="contact-form" class="space-y-6">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="first-name"
+                    class="block text-sm font-medium text-secondary mb-2"
+                    >First Name</label
+                  >
+                  <input
+                    type="text"
+                    id="first-name"
+                    name="first-name"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition duration-300"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="last-name"
+                    class="block text-sm font-medium text-secondary mb-2"
+                    >Last Name</label
+                  >
+                  <input
+                    type="text"
+                    id="last-name"
+                    name="last-name"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition duration-300"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-secondary mb-2"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition duration-300"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="phone"
+                  class="block text-sm font-medium text-secondary mb-2"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition duration-300"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="subject"
+                  class="block text-sm font-medium text-secondary mb-2"
+                  >Subject</label
+                >
+                <select
+                  id="subject"
+                  name="subject"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition duration-300"
+                >
+                  <option value="">Select a subject</option>
+                  <option value="reservation">Reservation Inquiry</option>
+                  <option value="private-event">Private Event</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="general">General Question</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-secondary mb-2"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows="5"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition duration-300"
+                  placeholder="Tell us how we can help you..."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-accent hover:bg-light text-white hover:text-primary font-semibold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Information & Map -->
+          <div class="space-y-8">
+            <!-- Contact Info Cards -->
+            <div class="grid gap-6">
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="flex items-center mb-4">
+                  <div class="bg-accent rounded-full p-3 mr-4">
+                    <svg
+                      class="w-6 h-6 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      ></path>
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold text-primary">Visit Us</h3>
+                    <p class="text-gray-600">55 Water St, Brooklyn, NY 11201</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="flex items-center mb-4">
+                  <div class="bg-accent rounded-full p-3 mr-4">
+                    <svg
+                      class="w-6 h-6 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold text-primary">Call Us</h3>
+                    <p class="text-gray-600">(718) 555-0123</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="flex items-center mb-4">
+                  <div class="bg-accent rounded-full p-3 mr-4">
+                    <svg
+                      class="w-6 h-6 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold text-primary">Email Us</h3>
+                    <p class="text-gray-600">info@cecconis.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <h3 class="text-xl font-semibold text-primary mb-4">
+                Business Hours
+              </h3>
+              <div class="space-y-2">
+                <div class="flex justify-between">
+                  <span class="text-secondary">Monday - Thursday</span>
+                  <span class="text-gray-600">11:30 AM - 10:00 PM</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-secondary">Friday - Saturday</span>
+                  <span class="text-gray-600">11:30 AM - 11:00 PM</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-secondary">Sunday</span>
+                  <span class="text-gray-600">12:00 PM - 9:00 PM</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Google Map -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <h3 class="text-xl font-semibold text-primary mb-4">Find Us</h3>
+              <div class="aspect-w-16 aspect-h-9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.4442164756287!2d-73.99973088459394!3d40.70365647933037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316e4b3b3b%3A0x4b3b3b3b3b3b3b3b!2s55%20Water%20St%2C%20Brooklyn%2C%20NY%2011201!5e0!3m2!1sen!2sus!4v1635789123456!5m2!1sen!2sus"
+                  width="100%"
+                  height="300"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  class="rounded-lg"
+                >
+                </iframe>
+              </div>
+              <div class="mt-4 text-center">
+                <a
+                  href="https://maps.app.goo.gl/H7kd3xLuQ88mnFAq9"
+                  target="_blank"
+                  class="inline-flex items-center text-accent hover:text-light transition duration-300"
+                >
+                  <svg
+                    class="w-4 h-4 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    ></path>
+                  </svg>
+                  Get Directions
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-light py-8">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+            <p class="mb-2">55 Water St, Brooklyn, NY 11201</p>
+            <p class="mb-2">Phone: (718) 555-0123</p>
+            <p>Email: info@cecconis.com</p>
+          </div>
+
+          <!-- Business Hours -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Business Hours</h3>
+            <p class="mb-1">Monday - Thursday: 11:30 AM - 10:00 PM</p>
+            <p class="mb-1">Friday - Saturday: 11:30 AM - 11:00 PM</p>
+            <p>Sunday: 12:00 PM - 9:00 PM</p>
+          </div>
+
+          <!-- Social Media -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+            <div class="flex space-x-4">
+              <a
+                href="https://www.facebook.com/pages/Cecconis/196777241021264"
+                target="_blank"
+                class="text-light hover:text-accent transition duration-300"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/cecconisrestaurants/?hl=en"
+                target="_blank"
+                class="text-light hover:text-accent transition duration-300"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
